@@ -159,6 +159,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sales.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
