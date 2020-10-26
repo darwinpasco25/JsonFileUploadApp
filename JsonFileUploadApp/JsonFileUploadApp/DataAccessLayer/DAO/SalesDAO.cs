@@ -48,13 +48,13 @@ namespace JsonFileUploadApp.DataAccessLayer.DAO
             @params[0] = new MySqlParameter(Parameters.JSON_STRING, MySqlDbType.JSON);
             @params[0].Value = JSONString;
 
-            //@params[1] = new MySqlParameter(Parameters.RESULT, MySqlDbType.Int32);
-            //@params[1].Direction = ParameterDirection.Output;
+            @params[1] = new MySqlParameter(Parameters.RESULT, MySqlDbType.Int32);
+            @params[1].Direction = ParameterDirection.Output;
 
             try
             {
                 sqldb.ExecuteReader("ImportSalesData", CommandType.StoredProcedure, @params);
-                outResult = 1; //int.Parse(@params[1].Value.ToString());
+                outResult = int.Parse(@params[1].Value.ToString());
             }
             catch (System.Exception ex)
             {
