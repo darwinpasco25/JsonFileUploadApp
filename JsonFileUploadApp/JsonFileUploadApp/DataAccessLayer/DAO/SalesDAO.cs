@@ -43,7 +43,7 @@ namespace JsonFileUploadApp.DataAccessLayer.DAO
             ConnectionValues ConnStr = new ConnectionValues();
             MySqlDatabase sqldb = new MySqlDatabase(ConnStr.defaultConn());
 
-            MySqlParameter[] @params = new MySqlParameter[1];
+            MySqlParameter[] @params = new MySqlParameter[2];
 
             @params[0] = new MySqlParameter(Parameters.JSON_STRING, MySqlDbType.JSON);
             @params[0].Value = JSONString;
